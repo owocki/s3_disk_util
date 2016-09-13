@@ -76,3 +76,8 @@ region=us-west-2
 # What else
 
 This script can run a little slow on larger buckets.  Thats okay; This is a limitation inherent to the way this information is provided via AWS APIs.  Pipe `du.py`'s' output to a file (perhaps inside of a `screen` or `tmux`) and come back later.
+
+
+
+<!-- Google Analytics -->
+<img src='https://ga-beacon.appspot.com/UA-1014419-15/owocki/s3_disk_util' style='width:1px; height:1px;' >
