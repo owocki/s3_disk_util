@@ -24,7 +24,7 @@ optional arguments:
   -di DIR, --dir DIR    Directory to examine (ex: 'logs/')
   ```
 
-  ## Example
+## Example
 
   ```
   kevinowocki@local /Users/kevinowocki/Desktop/s3_disk_utils~ % python3 du.py --depth=1 --bucket=BUCKETNAME
@@ -55,7 +55,7 @@ BUCKETNAME
 
  ```
 
- # Setup
+# Setup
 
 1. Create a AWS IAM user at https://console.aws.amazon.com/iam/home.
     * Make sure your user has `AmazonS3FullAccess` and `CloudWatchReadOnlyAccess` policies.
