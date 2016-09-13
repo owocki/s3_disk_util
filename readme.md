@@ -1,7 +1,7 @@
 # s3_disk_util
 
 * _What_ -- A tool that allows a user to visualize which buckets (and parts of buckets) are using the most data storage.
-* _Why_ -- The S3 control panels (even CloudWatch) do not really provide anything similar.
+* _Why_ -- Because I'm trying to pare down my S3 bill, and the S3 control panels (even CloudWatch) do not really provide anything similar.
 * _Inspiration_ -- This script is meant to be like the `du` tool for linux, except for inspecting the disk usage of s3 buckets.  
 * _How_ -- It will traverse s3 buckets and provide high level disk usage information to stdout.
 
