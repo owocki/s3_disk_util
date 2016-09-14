@@ -13,7 +13,7 @@ parser.add_argument("-di", "--dir", default='/', help="Directory to examine (ex:
 
 # setup
 try:
-    s3 = boto3.resource('s3')
+    s3 = boto3.resource('s3',config=boto3.session.Config(signature_version='s3v4'))
 
     # args
     args = parser.parse_args()
