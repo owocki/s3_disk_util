@@ -63,9 +63,9 @@ BUCKETNAME
 ```
 kevinowocki@local /Users/kevinowocki/Desktop/s3_disk_utils~ % cat ~/.aws/credentials
 [default]
-aws_access_key_id = AKIAJCK54GNLN5DGAUGQ
-aws_secret_access_key = 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
-region=us-west-2
+aws_access_key_id = ACCESS_KEY_GOES_HERE
+aws_secret_access_key = SECRET_KEY_GOES_HERE
+region=REGION
 ```
 3. Clone this repo.
 4. Install python3 (if needed) and boto3 (if needed).
