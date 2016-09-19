@@ -9,7 +9,7 @@
 
 ```
 kevinowocki@local /Users/kevinowocki/Desktop/s3_disk_util~ % python3 du.py --help
-usage: du.py [-h] [-b BUCKET] [-d DEPTH] [-di DIR]
+usage: du.py [-h] [-b BUCKET] [-p PROFILE] [-d DEPTH] [-di DIR]
 
 This script is meant to be like the `du` tool for linux, except for inspecting
 the disk usage of s3 buckets. It will traverse s3 buckets and provide high
