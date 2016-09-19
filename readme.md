@@ -19,6 +19,8 @@ optional arguments:
   -h, --help            show this help message and exit
   -b BUCKET, --bucket BUCKET
                         Bucket to examine (ex: 'com.owocki.assets')
+  -p PROFILE, --profile
+                        AWS credentials profile name (default: 'default')
   -d DEPTH, --depth DEPTH
                         Depth to examine bucket (ex: 4)
   -di DIR, --dir DIR    Directory to examine (ex: 'logs/')
@@ -27,7 +29,7 @@ optional arguments:
 ## Example
 
   ```
-  kevinowocki@local /Users/kevinowocki/Desktop/s3_disk_utils~ % python3 du.py --depth=1 --bucket=BUCKETNAME
+  kevinowocki@local /Users/kevinowocki/Desktop/s3_disk_utils~ % python3 du.py --depth=1 --bucket=BUCKETNAME --profile=mytestaccount
 BUCKETNAME
 (Cloudwatch bucket size estimate: 22.7GiB)
   / : 22.7GiB
@@ -59,7 +61,7 @@ BUCKETNAME
 
 1. Create a AWS IAM user at https://console.aws.amazon.com/iam/home.
     * Make sure your user has `AmazonS3FullAccess` and `CloudWatchReadOnlyAccess` policies.
-2. Create a config file that looks like this:
+2. Use your existing `~/.aws/credentials` file and profile names or create a config file that looks like this:
 ```
 kevinowocki@local /Users/kevinowocki/Desktop/s3_disk_utils~ % cat ~/.aws/credentials
 [default]
