@@ -7,16 +7,19 @@ from helpers import cloudwatch_bucket_size, formatted_size, print_sizes_by_dir
 import sys
 
 parser = argparse.ArgumentParser(description="This script is meant to be like the `du` tool for linux, except for inspecting the disk usage of s3 buckets.  It will traverse s3 buckets and provide high level disk usage information to stdout.")
+parser.add_argument("-p", "--profile", default='default', help="AWS credentials profile to use")
 parser.add_argument("-b", "--bucket", help="Bucket to examine (ex: 'com.owocki.assets')")
 parser.add_argument("-d", "--depth", type=int, default=1, help="Depth to examine bucket (ex: 4)")
 parser.add_argument("-di", "--dir", default='/', help="Directory to examine (ex: 'logs/')")
 
 # setup
 try:
-    s3 = boto3.resource('s3',config=boto3.session.Config(signature_version='s3v4'))
-
     # args
     args = parser.parse_args()
+
+    boto3.setup_default_session(profile_name=args.profile)
+    
+    s3 = boto3.resource('s3',config=boto3.session.Config(signature_version='s3v4'))
 
     if not args.bucket:
         buckets = s3.buckets.all()
