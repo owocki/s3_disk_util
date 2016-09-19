@@ -19,7 +19,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -b BUCKET, --bucket BUCKET
                         Bucket to examine (ex: 'com.owocki.assets')
-  -p PROFILE, --profile
+  -p PROFILE, --profile PROFILE
                         AWS credentials profile name (default: 'default')
   -d DEPTH, --depth DEPTH
                         Depth to examine bucket (ex: 4)
